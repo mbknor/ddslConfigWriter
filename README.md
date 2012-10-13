@@ -1,10 +1,13 @@
 DDSL Config Writer
 ==============
 
+
 Short description
 ----------------
 
 ddslConfigWriter automatically reconfigures nginx (or any other reverse proxy) when you add or remove a server.
+Also decribed in this [post](https://plus.google.com/116342781887978516536/posts/NhUTkq9pFNo)
+
 
 Longer description
 ----------------
