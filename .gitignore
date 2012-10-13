@@ -4,3 +4,4 @@ logs/
 out
 target
 .settings
+generatedConfig.conf
