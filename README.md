@@ -23,7 +23,7 @@ Currently only nginx reconfiguration is bundled but as you can see, it is really
 How does it work?
 ===========
 
-ddslConfigWriter monitors [DDSL](https://github.com/mbknor/ddsl) for a specific service and (re)writes nginex-config (or any other reverse proxy) when the list of online services changes. Then it triggers reloading of the configuration.
+ddslConfigWriter monitors [DDSL](https://github.com/mbknor/ddsl) for a specific service and (re)writes nginx-config (or any other reverse proxy) when the list of online services changes. Then it triggers reloading of the configuration.
 
 It reads configuration from [config.properties](https://github.com/mbknor/ddslConfigWriter/blob/master/config.properties)
 
@@ -57,11 +57,11 @@ start ddslConfigWriter:
 
 It will write a new nginx config file: **generatedConfig.conf**
 
-Start nginex with that config-file:
+Start nginx with that config-file:
 
-	nginex -c /full-path/generatedConfig.conf
+	nginx -c /full-path/generatedConfig.conf
 
-nginex now runs in the background listening on port 7080 and will forward trafic to the play app
+nginx now runs in the background listening on port 7080 and will forward trafic to the play app
 
 Now we want to add another play server.
 
@@ -83,4 +83,4 @@ ddslConfigWriter will then tell nginx to reload its configuration.
 
 traffic will now be forwarded to the old app running on 9000 and the new app running on 9001
 
-If you now quits the old app running on 9000, nginex will get reconfigured to only forward trafic to 9001.
+If you now quits the old app running on 9000, nginx will get reconfigured to only forward trafic to 9001.
