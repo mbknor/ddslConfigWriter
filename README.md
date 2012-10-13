@@ -43,7 +43,7 @@ compile and stage it:
 
 	/path-to-play/play clean stage
 
-start it:
+start it (on this machine or any other machine):
 
 	target/start
 
@@ -73,7 +73,7 @@ compile and stage it:
 
     /path-to-play/play clean stage
 
-run it on different port:
+run it on different port (on this machine or any other machine):
 
     target/start -Dhttp.port=9001
 
@@ -84,7 +84,3 @@ ddslConfigWriter will then tell nginx to reload its configuration.
 traffic will now be forwarded to the old app running on 9000 and the new app running on 9001
 
 If you now quits the old app running on 9000, nginex will get reconfigured to only forward trafic to 9001.
-
-
-
-
